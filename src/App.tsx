@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { Character } from './components/Character';
 import { useCharacter } from './hooks/useCharacter';
  
+
 const App = () => {
 
   const char = useCharacter();
@@ -11,7 +12,7 @@ const App = () => {
   },[]);
 
   const handleKeyDown = (e: KeyboardEvent) => {
-    console.log(e.code)
+    
     switch(e.code){
       case 'KeyA':
       case 'ArrowLeft':
@@ -38,7 +39,7 @@ const App = () => {
  return (
   <C.Container>
     <C.Map>
-     <Character x={char.x} y={char.y} />
+     <Character x={char.x} y={char.y} side={char.side}/>
     </C.Map>
   </C.Container>
  );
