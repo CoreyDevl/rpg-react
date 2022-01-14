@@ -45,7 +45,7 @@ export const useCharacter = () => {
         
       return  (mapSpots[y][x] === 1);
       }
-    } 
+     
     return false;
   }
 
